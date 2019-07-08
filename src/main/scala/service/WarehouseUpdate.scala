@@ -1,9 +1,9 @@
 package service
 
 import model.WarehouseInfo
-import persistance.{CacheableThings, DeclarationCache}
+import persistance.DeclarationCache
 
-class WarehouseUpdate extends CacheableThings {
+class WarehouseUpdate {
 
   def retrieve(declarationId: String) = {
     DeclarationCache.retrieve[WarehouseInfo](declarationId) match {
